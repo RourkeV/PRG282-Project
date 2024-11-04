@@ -94,6 +94,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(964, 609);
             this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "View All Students";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // button8
