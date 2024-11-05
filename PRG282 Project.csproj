@@ -52,7 +52,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business Layer\Data Manipulation.cs" />
+    <Compile Include="Business Layer\DataManipulation.cs" />
+    <Compile Include="Business Layer\StudentObj.cs" />
     <Compile Include="Data Access Layer\DataHandler.cs" />
     <Compile Include="UserControls\AddStudent.cs">
       <SubType>UserControl</SubType>
@@ -142,6 +143,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

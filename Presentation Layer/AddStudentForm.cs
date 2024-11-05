@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PRG282_Project.Business_Layer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,16 @@ namespace PRG282_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Data_Manipulation dm = new Data_Manipulation();
+            string IDIn = txtID.Text;
+            string nameIn = txtName.Text;
+            string dateIn = $"{dtDate.Value.Year.ToString()}-{dtDate.Value.Month.ToString()}-{dtDate.Value.Day.ToString()}";
+            string courseIn = cmbCourse.Text;
 
+            dm.getNewDetails(IDIn, nameIn, dateIn, courseIn);
+
+            MessageBox.Show("Student Has Been Added!");
+            this.Close();
         }
     }
 }
