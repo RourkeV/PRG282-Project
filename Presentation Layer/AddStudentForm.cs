@@ -16,5 +16,10 @@ namespace PRG282_Project
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
