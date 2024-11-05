@@ -34,6 +34,10 @@ namespace PRG282_Project
         {
             AddStudentForm add = new AddStudentForm();
             add.Show();
+
+            Data_Manipulation dm = new Data_Manipulation();
+
+            viewStudents.DataSource = dm.display();
         }
       
 

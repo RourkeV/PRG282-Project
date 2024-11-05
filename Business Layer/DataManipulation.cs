@@ -10,9 +10,9 @@ namespace PRG282_Project.Business_Layer
 {
     internal class Data_Manipulation
     {
+        public DataHandler dataHandler = new DataHandler();
         public DataTable display()
         {
-            DataHandler dataHandler = new DataHandler();
 
             DataTable studentData = new DataTable();
 
@@ -21,14 +21,21 @@ namespace PRG282_Project.Business_Layer
             studentData.Columns.Add("Date", typeof(string));
             studentData.Columns.Add("Course", typeof(string));
 
-            List<string[]> displayList = dataHandler.fillList();
+            List<StudentObj> displayList = dataHandler.fillList();
 
             foreach (var item in displayList)
             {
-                studentData.Rows.Add(item);
+                studentData.Rows.Add(item.Id, item.Name, item.BDate, item.Course);
             }
 
             return studentData;
+        }
+
+        public void getNewDetails(string inID, string inName, string inDate, string inCourse)
+        {
+            StudentObj addStu = new StudentObj(inID, inName, inDate, inCourse);
+
+            dataHandler.addStudent(addStu);
         }
     }
 }
