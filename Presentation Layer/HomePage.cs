@@ -27,7 +27,8 @@ namespace PRG282_Project
 
         private void HomePage_Load(object sender, EventArgs e)
         {
-            
+            DataHandler handler = new DataHandler();
+            handler.fillList();
         }
 
         private void button8_Click(object sender, EventArgs e)
