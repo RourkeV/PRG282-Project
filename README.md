@@ -37,6 +37,7 @@ Added Text File: Rourke added text file and implemented functionality for displa
 Flexibility: Gabriel Switched from using TabControl to UserControl for better flexibility.
 Functionality: Rourke Added functionality to Add Student form.
 Merging: Rourke merged branch testing-merge into adding-student-branch, and Merged pull request #4 from RourkeV/adding-student-branch.
+Error Handling: Gabriel fixed an issue where the code was giving errors from an add on.
 
 ## Contributing 
 Pull requests are welcome. For major changes please open an issue first to discuss changes.
