@@ -37,7 +37,6 @@ namespace PRG282_Project
 
             Data_Manipulation dm = new Data_Manipulation();
 
-            viewStudents.DataSource = dm.display();
         }
       
 
