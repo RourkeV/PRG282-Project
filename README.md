@@ -12,6 +12,7 @@ Run the application.
 Add New Student
 Using Add Student form input new student detail and save into students.txt.
 
+
 View All Students 
 The View All Students form lists all of the students from students.txt.
 
@@ -32,6 +33,10 @@ Git Configuration: Added .gitattributes and .gitignore by Rourke to better struc
 Added Data File: Matthew added students.txt in the bin\\Debug directory to store records of students.
 Add Student Update: Added Environment.NewLine to record format to ensure each entry is saved to a new line.
 Refactoring: Refactored code and organized for better readability and maintainability.
+Added Text File: Rourke added text file and implemented functionality for displaying data and Linked Add Student page.
+Flexibility: Gabriel Switched from using TabControl to UserControl for better flexibility.
+Functionality: Rourke Added functionality to Add Student form.
+Merging: Rourke merged branch testing-merge into adding-student-branch, and Merged pull request #4 from RourkeV/adding-student-branch.
 
 ## Contributing 
 Pull requests are welcome. For major changes please open an issue first to discuss changes.
