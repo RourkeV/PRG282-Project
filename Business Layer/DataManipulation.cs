@@ -40,6 +40,24 @@ namespace PRG282_Project.Business_Layer
             dataHandler.addStudent(addStu);
         }
 
-        
+        public void dupeCheck(string ID, string name, string date, string course)
+        {
+            dataHandler.fillList();
+            for (int i = 0; i < dataHandler.studentList.Count; i++)
+            {
+                if (dataHandler.studentList[i].Id == ID)
+                {
+                    MessageBox.Show("This ID Already Exists!");
+                    break;
+                }
+                else if (i == dataHandler.studentList.Count -1)
+                {
+                    getNewDetails(ID, name, date, course);
+
+                    MessageBox.Show("Student Has Been Added!");
+                    break;
+                }
+            }
+        }
     }
 }
