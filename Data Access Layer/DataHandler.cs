@@ -17,7 +17,7 @@ namespace PRG282_Project.Data_Access_Layer
 
         //reading the text file and pushing the information to an array so that we can split the text, seperating the information.
 
-        public static string filepath = @"C:\Users\Rourke\Desktop\Belgium Campus Work\PRG282\PRG282 Project\Student_Info.txt";
+        public static string filepath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"Student_Info.txt");
 
 
         private string[] students = File.ReadAllLines(filepath);
