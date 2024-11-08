@@ -24,5 +24,12 @@ namespace PRG282_Project.UserControls
 
             viewStudents.DataSource = dm.display();
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string stuID = txtStuSearch.Text;
+            Data_Manipulation ds = new Data_Manipulation();
+            viewStudents.DataSource = ds.displaySearch(stuID);
+        }
     }
 }

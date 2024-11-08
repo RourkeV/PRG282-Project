@@ -32,6 +32,28 @@ namespace PRG282_Project.Business_Layer
 
             return studentData;
         }
+        public DataTable displaySearch(string studentID)
+        {
+            DataTable studentData = new DataTable();
+
+            studentData.Columns.Add("ID", typeof(string));
+            studentData.Columns.Add("Name", typeof(string));
+            studentData.Columns.Add("Date", typeof(string));
+            studentData.Columns.Add("Course", typeof(string));
+
+            List<StudentObj> displayList = dataHandler.fillList();
+
+            foreach (var item in displayList)
+            {
+                if (item.Id == studentID)
+                {
+                    studentData.Rows.Add(item.Id, item.Name, item.BDate, item.Course);
+
+                }
+            }
+
+            return studentData;
+        }
 
         public void getNewDetails(string inID, string inName, string inDate, string inCourse)
         {
