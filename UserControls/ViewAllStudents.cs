@@ -31,5 +31,31 @@ namespace PRG282_Project.UserControls
             Data_Manipulation ds = new Data_Manipulation();
             viewStudents.DataSource = ds.displaySearch(stuID);
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Data_Manipulation dm = new Data_Manipulation();
+            DataGridViewRow selectedRow = viewStudents.SelectedRows[0];
+
+            string ID = selectedRow.Cells["ID"].Value.ToString();
+            string name = selectedRow.Cells["Name"].Value.ToString();
+            DialogResult choice = MessageBox.Show(
+                $"Do you wish to Delete {name}'s Profile", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            
+
+            if (choice == DialogResult.Yes)
+            {
+                dm.studentDelete(ID);
+                MessageBox.Show("Student Has been deleted");
+                viewStudents.DataSource = dm.display();
+            }
+            
+        }
+
+        private void btnGenSum_Click(object sender, EventArgs e)
+        {
+            Data_Manipulation dm = new Data_Manipulation();
+            MessageBox.Show(dm.summary());
+        }
     }
 }

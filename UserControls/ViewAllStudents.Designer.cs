@@ -33,8 +33,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtStuSearch = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnGenSum = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.viewStudents = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.viewStudents)).BeginInit();
             this.SuspendLayout();
@@ -91,27 +91,29 @@
             this.button6.Text = "Update";
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnGenSum
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(1042, 906);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(213, 63);
-            this.button5.TabIndex = 40;
-            this.button5.Text = "Generate Summary";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnGenSum.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenSum.Location = new System.Drawing.Point(1042, 906);
+            this.btnGenSum.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnGenSum.Name = "btnGenSum";
+            this.btnGenSum.Size = new System.Drawing.Size(213, 63);
+            this.btnGenSum.TabIndex = 40;
+            this.btnGenSum.Text = "Generate Summary";
+            this.btnGenSum.UseVisualStyleBackColor = true;
+            this.btnGenSum.Click += new System.EventHandler(this.btnGenSum_Click);
             // 
-            // button1
+            // btnDelete
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(783, 905);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(213, 63);
-            this.button1.TabIndex = 39;
-            this.button1.Text = "Delete Selected";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(783, 905);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(213, 63);
+            this.btnDelete.TabIndex = 39;
+            this.btnDelete.Text = "Delete Selected";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // viewStudents
             // 
@@ -132,8 +134,8 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtStuSearch);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnGenSum);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.viewStudents);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ViewAllStudents";
@@ -152,8 +154,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtStuSearch;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGenSum;
+        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.DataGridView viewStudents;
     }
 }
