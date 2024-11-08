@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using PRG282_Project.Data_Access_Layer;
 
 namespace PRG282_Project.Business_Layer
@@ -95,6 +97,9 @@ namespace PRG282_Project.Business_Layer
                 }
             }
         }
+        
+
+        
         public string summary()
         {
             int nrStudents;

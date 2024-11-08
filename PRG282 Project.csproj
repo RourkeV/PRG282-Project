@@ -41,6 +41,7 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,23 +56,17 @@
     <Compile Include="Business Layer\DataManipulation.cs" />
     <Compile Include="Business Layer\StudentObj.cs" />
     <Compile Include="Data Access Layer\DataHandler.cs" />
-    <Compile Include="UserControls\AddStudent.cs">
+    <Compile Include="Presentation Layer\AddStudent.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\AddStudent.Designer.cs">
+    <Compile Include="Presentation Layer\AddStudent.Designer.cs">
       <DependentUpon>AddStudent.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\Home.cs">
+    <Compile Include="Presentation Layer\Home.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\Home.Designer.cs">
+    <Compile Include="Presentation Layer\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentation Layer\AddStudentForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentation Layer\AddStudentForm.Designer.cs">
-      <DependentUpon>AddStudentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation Layer\HomePage.cs">
       <SubType>Form</SubType>
@@ -81,32 +76,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Presentation Layer\UpdateForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentation Layer\UpdateForm.Designer.cs">
-      <DependentUpon>UpdateForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\UpdateStudent.cs">
+    <Compile Include="Presentation Layer\UpdateStudent.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UpdateStudent.Designer.cs">
+    <Compile Include="Presentation Layer\UpdateStudent.Designer.cs">
       <DependentUpon>UpdateStudent.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ViewAllStudents.cs">
+    <Compile Include="Presentation Layer\ViewAllStudents.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\ViewAllStudents.Designer.cs">
+    <Compile Include="Presentation Layer\ViewAllStudents.Designer.cs">
       <DependentUpon>ViewAllStudents.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UserControls\AddStudent.resx">
+    <EmbeddedResource Include="Presentation Layer\AddStudent.resx">
       <DependentUpon>AddStudent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\Home.resx">
+    <EmbeddedResource Include="Presentation Layer\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layer\AddStudentForm.resx">
-      <DependentUpon>AddStudentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
@@ -120,13 +106,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Presentation Layer\UpdateForm.resx">
-      <DependentUpon>UpdateForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UpdateStudent.resx">
+    <EmbeddedResource Include="Presentation Layer\UpdateStudent.resx">
       <DependentUpon>UpdateStudent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ViewAllStudents.resx">
+    <EmbeddedResource Include="Presentation Layer\ViewAllStudents.resx">
       <DependentUpon>ViewAllStudents.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -143,5 +126,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -7,11 +7,12 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI;
 using System.Windows.Forms;
 
 namespace PRG282_Project.UserControls
 {
-    public partial class ViewAllStudents : UserControl
+    public partial class ViewAllStudents : System.Windows.Forms.UserControl
     {
         public ViewAllStudents()
         {
@@ -24,6 +25,7 @@ namespace PRG282_Project.UserControls
 
             viewStudents.DataSource = dm.display();
         }
+
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -57,5 +59,7 @@ namespace PRG282_Project.UserControls
             Data_Manipulation dm = new Data_Manipulation();
             MessageBox.Show(dm.summary());
         }
+
+        
     }
 }

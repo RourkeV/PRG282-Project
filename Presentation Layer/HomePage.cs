@@ -31,21 +31,12 @@ namespace PRG282_Project
             handler.fillList();
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void imgIcon_Click(object sender, EventArgs e)
         {
-            AddStudentForm add = new AddStudentForm();
-            add.Show();
-
-            Data_Manipulation dm = new Data_Manipulation();
-
+            Home uc = new Home();
+            addUserControl(uc);
         }
-      
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void addUserControl(UserControl userControl)
+        public void addUserControl(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
             panelContainer.Controls.Clear();
