@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -54,6 +55,19 @@ namespace PRG282_Project.Business_Layer
 
             return studentData;
         }
+        public void studentDelete(string ID)
+        {
+
+            for (int i = 0; i<dataHandler.fillList().Count(); i++)
+            {
+                if (dataHandler.studentList[i].Id == ID)
+                {
+                    dataHandler.studentList.RemoveAt(i);
+                    dataHandler.updateTxt();
+                }
+            }
+            
+        }
 
         public void getNewDetails(string inID, string inName, string inDate, string inCourse)
         {
@@ -80,6 +94,38 @@ namespace PRG282_Project.Business_Layer
                     break;
                 }
             }
+        }
+        public string summary()
+        {
+            int nrStudents;
+            double avgAge = 0;
+            dataHandler.fillList();
+
+            nrStudents = dataHandler.studentList.Count;
+
+            string dateString;
+
+            // Define the format of the input string
+            string format = "yyyy-MM-dd";
+
+            // Convert the string to a DateTime object
+
+            foreach (var item in dataHandler.studentList)
+            {
+                dateString = item.BDate;
+                DateTime BirthDate = DateTime.ParseExact(dateString, format, CultureInfo.InvariantCulture);
+                avgAge += DateTime.Today.Year - BirthDate.Year;
+            }
+
+            avgAge = avgAge / nrStudents;
+
+            dataHandler.updateSummary($@"Summary
+Number of Students: {nrStudents}
+Average age Of Students: {avgAge}");
+
+            return ($@"Summary
+Number of Students: {nrStudents}
+Average age Of Students: {avgAge}");
         }
     }
 }

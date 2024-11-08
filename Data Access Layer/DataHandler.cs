@@ -18,6 +18,7 @@ namespace PRG282_Project.Data_Access_Layer
         //reading the text file and pushing the information to an array so that we can split the text, seperating the information.
 
         public static string filepath = @"Student_Info.txt";
+        public static string sumFilepath = @"Summary.txt";
 
 
         private string[] students = File.ReadAllLines(filepath);
@@ -69,7 +70,11 @@ namespace PRG282_Project.Data_Access_Layer
             }
             updateTxt();
         }
-
+        
+        public void updateSummary(string sum)
+        {
+            File.WriteAllText(sumFilepath,sum);
+        }
         public void updateTxt()
         {
             string[] updateString = new string[studentList.Count];
@@ -78,7 +83,6 @@ namespace PRG282_Project.Data_Access_Layer
             {
                 updateString[i] = $"{studentList[i].Id},{studentList[i].Name},{studentList[i].BDate},{studentList[i].Course}";
             }
-
 
             File.WriteAllLines(filepath, updateString);
         }
