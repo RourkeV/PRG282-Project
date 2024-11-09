@@ -30,6 +30,10 @@ namespace PRG282_Project.UserControls
 
         private void btnSub_Click(object sender, EventArgs e)
         {
+            if (!ValidateForm())
+            {
+                return; 
+            }
             Data_Manipulation dm = new Data_Manipulation();
             string IDIn = txtStuID.Text;
             string nameIn = txtName.Text;
@@ -45,7 +49,18 @@ namespace PRG282_Project.UserControls
                 dm.dupeCheck(IDIn, nameIn, dateIn, courseIn);   
             }
 
-            
+ 
+        }
+        private bool ValidateForm() 
+        {
+            if (string.IsNullOrWhiteSpace(txtName.Text))
+            {
+                MessageBox.Show("Please enter the student's name.");
+                txtName.Focus();
+                return false;
+            }
+            return true;
+
         }
     }
 }
