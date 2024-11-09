@@ -26,6 +26,10 @@ namespace PRG282_Project.UserControls
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            string ID = txtStuID.Text;
+            string name = txtName.Text;
+            string date = txtBDate.Text;
+            string course = cmbCourse.Text;
             if (txtStuID.Text != "" || txtName.Text != "" || txtBDate.Text != "")
             {
                 handler.updateStudent(txtStuID.Text, txtName.Text, txtBDate.Text, cmbCourse.Text);
@@ -34,6 +38,7 @@ namespace PRG282_Project.UserControls
             {
                 MessageBox.Show("Please Make Sure All Inputs are Filled");
             }
+            dm.updateStudentRecord(ID,name,date,course);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

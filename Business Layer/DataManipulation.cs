@@ -97,6 +97,32 @@ namespace PRG282_Project.Business_Layer
                 }
             }
         }
+
+        public void updateStudentRecord(string ID, string name, string date, string course)
+        {
+            dataHandler.fillList();
+
+            bool studentFound = false;
+            for (int i = 0; i < dataHandler.studentList.Count; i++) 
+            {
+                if (dataHandler.studentList[i].Id == ID) 
+                {
+                    dataHandler.studentList[i].Name = name;
+                    dataHandler.studentList[i].BDate = date;
+                    dataHandler.studentList[i].Course = course;
+
+                    MessageBox.Show("Student Has Been Updated!");
+                    studentFound = true;
+                    break;
+
+                }  
+            }
+            if (!studentFound) 
+            {
+                MessageBox.Show("Student with the specified ID does not exist. Update Failed");
+            }
+
+        }
         
 
         
