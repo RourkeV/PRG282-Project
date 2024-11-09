@@ -60,6 +60,11 @@ namespace PRG282_Project.UserControls
             MessageBox.Show(dm.summary());
         }
 
-        
+        private void imgRefresh_Click(object sender, EventArgs e)
+        {
+            Data_Manipulation dm = new Data_Manipulation();
+
+            viewStudents.DataSource = dm.display();
+        }
     }
 }
