@@ -8,12 +8,13 @@ namespace PRG282_Project.Business_Layer
 {
     internal class StudentObj
     {
-
+        // Private fields to store student properties
         private string id;
         private string name;
         private string bDate;
         private string course;
-        
+
+        // Constructor to initialize a student object with provided details
         public StudentObj(string ID, string name, string birthday, string course)
         {
             this.id = ID;
@@ -21,7 +22,7 @@ namespace PRG282_Project.Business_Layer
             this.BDate = birthday;
             this.Course = course;
         }
-
+        // Properties for accessing and modifying student details
         public string Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
         public string BDate { get => bDate; set => bDate = value; }
