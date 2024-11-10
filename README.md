@@ -45,6 +45,7 @@ Added Functionality: Rourke Added Student ID Search Functionality. Rourke added 
 Dashboard: Gabriel Constructed Home Dashboard with graph, modified sizing and additional styling.
 Form Validation: Matthew added Form Validation to Add student form and update student form.
 Additional styling: Gabriel Added Additional Styling, and created refresh button on viewallsudentsform.
+Inline Comments: Matthew Added Inline Comments To the project.
 
 
 
