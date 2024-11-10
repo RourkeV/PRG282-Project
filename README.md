@@ -38,6 +38,16 @@ Flexibility: Gabriel Switched from using TabControl to UserControl for better fl
 Functionality: Rourke Added functionality to Add Student form.
 Merging: Rourke merged branch testing-merge into adding-student-branch, and Merged pull request #4 from RourkeV/adding-student-branch.
 Error Handling: Gabriel fixed an issue where the code was giving errors from an add on.
+Added Functionality: Rourke added functionality to Updating User.
+Small Updates: Rourke Made Small updates too the project.
+Dynamic FilePath: Rourke Added a Dynamic FilePath.
+Added Functionality: Rourke Added Student ID Search Functionality. Rourke added Functionality to Delete and Summary.
+Dashboard: Gabriel Constructed Home Dashboard with graph, modified sizing and additional styling.
+Form Validation: Matthew added Form Validation to Add student form and update student form.
+Additional styling: Gabriel Added Additional Styling, and created refresh button on viewallsudentsform.
+
+
+
 
 ## Contributing 
 Pull requests are welcome. For major changes please open an issue first to discuss changes.
