@@ -38,6 +38,7 @@ Flexibility: Gabriel Switched from using TabControl to UserControl for better fl
 Functionality: Rourke Added functionality to Add Student form.
 Merging: Rourke merged branch testing-merge into adding-student-branch, and Merged pull request #4 from RourkeV/adding-student-branch.
 
+
 ## Contributing 
 Pull requests are welcome. For major changes please open an issue first to discuss changes.
 
